@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>SmartAirport | Flights</title>
+
+<link rel="stylesheet"
+      href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-icon">
+            ✈
+        </div>
+
+        <div>
+            <h2>SmartAirport</h2>
+            <span>Operations Center</span>
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <p class="menu-title">
+            MAIN MENU
+        </p>
+
+        <a href="index.html">
+            <span>▦</span>
+            Dashboard
+        </a>
+
+        <a href="flights.html"
+           class="active">
+
+            <span>✈</span>
+            Flights
+
+        </a>
+
+        <a href="gates.html">
+            <span>▣</span>
+            Gates
+        </a>
+
+        <a href="baggage.html">
+            <span>▤</span>
+            Baggage
+        </a>
+
+        <a href="incidents.html">
+            <span>⚠</span>
+            Incidents
+        </a>
+
+
+        <p class="menu-title analytics-title">
+            ANALYTICS
+        </p>
+
+        <a href="analytics.html">
+            <span>◴</span>
+            Analytics
+        </a>
+
+    </nav>
+
+</aside>
+
+
+
+<main class="main">
+
+
+<header class="topbar">
+
+    <div>
+
+        <p class="breadcrumb">
+            Airport / Flights
+        </p>
+
+        <h1>
+            Flight Management
+        </h1>
+
+    </div>
+
+
+    <button class="primary-btn"
+            onclick="showMessage('New flight form opened ✈️')">
+
+        + Add Flight
+
+    </button>
+
+</header>
+
+
+
+<div class="search-area">
+
+    <input
+        type="text"
+        id="flightSearch"
+        placeholder="🔎 Search flight, destination or gate..."
+        onkeyup="searchFlights()">
+
+</div>
+
+
+
+<div class="dashboard-panel flight-page-panel">
+
+    <div class="panel-header">
+
+        <div>
+
+            <h2>
+                Today's Flights
+            </h2>
+
+            <p>
+                October 3, 2026
+            </p>
+
+        </div>
+
+
+        <select>
+
+            <option>All flights</option>
+
+            <option>Departures</option>
+
+            <option>Arrivals</option>
+
+        </select>
+
+    </div>
+
+
+
+    <div class="full-flight-table">
+
+
+        <div class="full-table-head">
+
+            <span>Flight</span>
+            <span>Airline</span>
+            <span>Destination</span>
+            <span>Time</span>
+            <span>Gate</span>
+            <span>Status</span>
+
+        </div>
+
+
+
+        <div class="full-flight-row">
+
+            <strong>TU204</strong>
+
+            <span>Tunisair</span>
+
+            <span>Paris</span>
+
+            <span>08:30</span>
+
+            <span>A12</span>
+
+            <span class="badge on-time">
+                On Time
+            </span>
+
+        </div>
+
+
+
+        <div class="full-flight-row">
+
+            <strong>TU315</strong>
+
+            <span>Tunisair</span>
+
+            <span>Istanbul</span>
+
+            <span>10:15</span>
+
+            <span>B04</span>
+
+            <span class="badge delayed">
+                Delayed
+            </span>
+
+        </div>
+
+
+
+        <div class="full-flight-row">
+
+            <strong>TU501</strong>
+
+            <span>Tunisair</span>
+
+            <span>Frankfurt</span>
+
+            <span>12:40</span>
+
+            <span>A08</span>
+
+            <span class="badge boarding">
+                Boarding
+            </span>
+
+        </div>
+
+
+
+        <div class="full-flight-row">
+
+            <strong>TU721</strong>
+
+            <span>Nouvelair</span>
+
+            <span>Dubai</span>
+
+            <span>14:20</span>
+
+            <span>C02</span>
+
+            <span class="badge on-time">
+                On Time
+            </span>
+
+        </div>
+
+
+
+        <div class="full-flight-row">
+
+            <strong>TU601</strong>
+
+            <span>Tunisair</span>
+
+            <span>Rome</span>
+
+            <span>16:00</span>
+
+            <span>A05</span>
+
+            <span class="badge scheduled">
+                Scheduled
+            </span>
+
+        </div>
+
+
+
+        <div class="full-flight-row">
+
+            <strong>TU811</strong>
+
+            <span>Nouvelair</span>
+
+            <span>London</span>
+
+            <span>18:45</span>
+
+            <span>B08</span>
+
+            <span class="badge scheduled">
+                Scheduled
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</main>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>

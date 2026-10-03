@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>SmartAirport | Baggage</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+<aside class="sidebar">
+
+<div class="brand">
+
+<div class="brand-icon">✈</div>
+
+<div>
+
+<h2>SmartAirport</h2>
+
+<span>
+Operations Center
+</span>
+
+</div>
+
+</div>
+
+
+<nav>
+
+<p class="menu-title">
+MAIN MENU
+</p>
+
+<a href="index.html">
+<span>▦</span>
+Dashboard
+</a>
+
+<a href="flights.html">
+<span>✈</span>
+Flights
+</a>
+
+<a href="gates.html">
+<span>▣</span>
+Gates
+</a>
+
+<a href="baggage.html"
+class="active">
+
+<span>▤</span>
+Baggage
+
+</a>
+
+<a href="incidents.html">
+<span>⚠</span>
+Incidents
+</a>
+
+
+<p class="menu-title analytics-title">
+ANALYTICS
+</p>
+
+<a href="analytics.html">
+<span>◴</span>
+Analytics
+</a>
+
+</nav>
+
+</aside>
+
+
+
+<main class="main">
+
+
+<header class="topbar">
+
+<div>
+
+<p class="breadcrumb">
+Airport / Baggage
+</p>
+
+<h1>
+Baggage Tracking
+</h1>
+
+</div>
+
+</header>
+
+
+
+<div class="baggage-search">
+
+<h2>
+Track a baggage
+</h2>
+
+<p>
+Enter the baggage identification number.
+</p>
+
+
+<div class="tracking-form">
+
+<input
+type="text"
+id="bagNumber"
+placeholder="Example: TN4821">
+
+
+<button
+onclick="trackBag()"
+class="primary-btn">
+
+Track Baggage
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<div id="bagResult"
+class="bag-result">
+
+</div>
+
+
+
+<div class="dashboard-panel">
+
+<div class="panel-header">
+
+<div>
+
+<h2>
+Recent Baggage
+</h2>
+
+<p>
+Latest baggage activity
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="baggage-table">
+
+<div class="baggage-head">
+
+<span>Bag ID</span>
+
+<span>Flight</span>
+
+<span>Passenger</span>
+
+<span>Location</span>
+
+<span>Status</span>
+
+</div>
+
+
+
+<div class="baggage-row">
+
+<strong>
+TN4821
+</strong>
+
+<span>
+TU204
+</span>
+
+<span>
+Passenger #1024
+</span>
+
+<span>
+Terminal A
+</span>
+
+<span class="badge on-time">
+Delivered
+</span>
+
+</div>
+
+
+
+<div class="baggage-row">
+
+<strong>
+TN7392
+</strong>
+
+<span>
+TU315
+</span>
+
+<span>
+Passenger #2031
+</span>
+
+<span>
+Baggage Hall
+</span>
+
+<span class="badge boarding">
+Processing
+</span>
+
+</div>
+
+
+
+<div class="baggage-row">
+
+<strong>
+TN8214
+</strong>
+
+<span>
+TU501
+</span>
+
+<span>
+Passenger #3452
+</span>
+
+<span>
+Gate A08
+</span>
+
+<span class="badge on-time">
+Loaded
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+
+
+<script>
+
+function trackBag() {
+
+const number =
+document.getElementById("bagNumber").value;
+
+const result =
+document.getElementById("bagResult");
+
+
+if(number === "") {
+
+result.innerHTML =
+"⚠️ Please enter a baggage number.";
+
+return;
+
+}
+
+
+result.innerHTML = `
+
+<div class="bag-tracking">
+
+<h3>
+🧳 Baggage ${number}
+</h3>
+
+<div class="tracking-line">
+
+<div class="tracking-step done">
+✓
+<span>
+Check-in
+</span>
+</div>
+
+<div class="tracking-step done">
+✓
+<span>
+Security
+</span>
+</div>
+
+<div class="tracking-step active-step">
+●
+<span>
+Loading
+</span>
+</div>
+
+<div class="tracking-step">
+○
+<span>
+Delivered
+</span>
+</div>
+
+</div>
+
+<p>
+Current location:
+<strong>
+Terminal A · Baggage Area
+</strong>
+</p>
+
+</div>
+
+`;
+
+}
+
+</script>
+
+</body>
+
+</html>

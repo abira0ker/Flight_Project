@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>SmartAirport | Incidents</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+<aside class="sidebar">
+
+<div class="brand">
+
+<div class="brand-icon">
+✈
+</div>
+
+<div>
+
+<h2>
+SmartAirport
+</h2>
+
+<span>
+Operations Center
+</span>
+
+</div>
+
+</div>
+
+
+<nav>
+
+<p class="menu-title">
+MAIN MENU
+</p>
+
+<a href="index.html">
+<span>▦</span>
+Dashboard
+</a>
+
+<a href="flights.html">
+<span>✈</span>
+Flights
+</a>
+
+<a href="gates.html">
+<span>▣</span>
+Gates
+</a>
+
+<a href="baggage.html">
+<span>▤</span>
+Baggage
+</a>
+
+<a href="incidents.html"
+class="active">
+
+<span>⚠</span>
+Incidents
+
+</a>
+
+
+<p class="menu-title analytics-title">
+ANALYTICS
+</p>
+
+<a href="analytics.html">
+<span>◴</span>
+Analytics
+</a>
+
+</nav>
+
+</aside>
+
+
+
+<main class="main">
+
+
+<header class="topbar">
+
+<div>
+
+<p class="breadcrumb">
+Airport / Incidents
+</p>
+
+<h1>
+Incident Management
+</h1>
+
+</div>
+
+
+<button
+class="primary-btn"
+onclick="showMessage('Incident report created ⚠️')">
+
++ Report Incident
+
+</button>
+
+</header>
+
+
+
+<div class="incident-summary">
+
+<div>
+
+<strong>
+3
+</strong>
+
+<span>
+Active Incidents
+</span>
+
+</div>
+
+
+<div>
+
+<strong>
+12
+</strong>
+
+<span>
+Resolved Today
+</span>
+
+</div>
+
+
+<div>
+
+<strong>
+98%
+</strong>
+
+<span>
+Operational Safety
+</span>
+
+</div>
+
+</div>
+
+
+
+<div class="dashboard-panel">
+
+<div class="panel-header">
+
+<div>
+
+<h2>
+Active Incidents
+</h2>
+
+<p>
+Monitor and resolve airport incidents.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="incident-card">
+
+<div class="large-incident-icon red">
+⚠
+</div>
+
+<div class="incident-content">
+
+<div class="incident-title">
+
+<h3>
+Flight TU315 delayed
+</h3>
+
+<span class="severity high">
+HIGH
+</span>
+
+</div>
+
+<p>
+Technical inspection required before departure.
+</p>
+
+<small>
+📍 Gate B04 · 12 minutes ago
+</small>
+
+</div>
+
+<button
+class="resolve-btn"
+onclick="resolveIncident(this)">
+
+Resolve
+
+</button>
+
+</div>
+
+
+
+<div class="incident-card">
+
+<div class="large-incident-icon orange">
+🧳
+</div>
+
+<div class="incident-content">
+
+<div class="incident-title">
+
+<h3>
+Unidentified baggage
+</h3>
+
+<span class="severity medium">
+MEDIUM
+</span>
+
+</div>
+
+<p>
+Bag TN4821 requires passenger verification.
+</p>
+
+<small>
+📍 Terminal A · 34 minutes ago
+</small>
+
+</div>
+
+<button
+class="resolve-btn"
+onclick="resolveIncident(this)">
+
+Resolve
+
+</button>
+
+</div>
+
+
+
+<div class="incident-card">
+
+<div class="large-incident-icon blue">
+ℹ
+</div>
+
+<div class="incident-content">
+
+<div class="incident-title">
+
+<h3>
+Gate change
+</h3>
+
+<span class="severity low">
+LOW
+</span>
+
+</div>
+
+<p>
+Flight TU501 moved from A07 to A08.
+</p>
+
+<small>
+📍 Terminal A · 1 hour ago
+</small>
+
+</div>
+
+<button
+class="resolve-btn"
+onclick="resolveIncident(this)">
+
+Resolve
+
+</button>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+
+
+<script>
+
+function resolveIncident(button) {
+
+button.innerText =
+"✓ Resolved";
+
+button.disabled = true;
+
+button.style.opacity =
+"0.6";
+
+}
+
+</script>
+
+</body>
+
+</html>
